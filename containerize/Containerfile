@@ -1,0 +1,13 @@
+# Use a minimal Python base image
+FROM python:3.11-slim
+
+# Set working directory inside container
+WORKDIR /app
+
+# Copy the entire anagrammatic directory into the container
+COPY ../ ./
+
+# Install Python dependencies
+
+# Set the default command
+ENTRYPOINT ["python", "anagrammar.py"]
